@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NavbarMenu from './components/NavbarMenu'
 import { Toaster } from 'react-hot-toast'
+import { LocationProvider } from '@/context/LocationContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,13 +18,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavbarMenu />
-        {children}
-        <Toaster />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <LocationProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <NavbarMenu />
+          {children}
+          <Toaster />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
         </body>
-    </html>
+      </html>
+    </LocationProvider>
   )
 }
