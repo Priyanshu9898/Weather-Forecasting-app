@@ -1,8 +1,11 @@
 import React from 'react'
+import WeatherCard from './components/Home/WeatherCard'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className="flex items-center justify-center w-full h-[80vh]">
+      <WeatherCard />
+    </div>
   )
 }
 
