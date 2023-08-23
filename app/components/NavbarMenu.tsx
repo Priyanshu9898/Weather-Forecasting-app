@@ -9,26 +9,28 @@ const NavbarMenu = () => {
       <Navbar fluid rounded>
         <Navbar.Brand href="/">
           <img
-            alt="Flowbite React Logo"
+            alt="Logo"
             className="mr-3 h-6 sm:h-9"
-            src="/favicon.svg"
+            src="/weather.png"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Frontend
+          Weather Forecasting
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
           
         </div>
-        <Navbar.Collapse>
-          <Navbar.Link active href="#">
+        {/* <Navbar.Collapse>
+          <Link href="/">
             <p>Home</p>
-          </Navbar.Link>
-          <Link href="#">About</Link>
-          <Link href="#">Services</Link>
-          <Link href="#">Pricing</Link>
-          <Link href="#">Contact</Link>
-        </Navbar.Collapse>
+          </Link>
+
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+        </Navbar.Collapse> */}
+
+      
+     
       </Navbar>
     </>
   );
